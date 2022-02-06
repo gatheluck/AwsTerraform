@@ -17,7 +17,7 @@ jobs:
     - name: setup terraform
       uses: hashicorp/setup-terraform@v1
       with:
-        terraform_version: ${{ TERRAFORM_VERSION }}
+        terraform_version: ${{ env.TERRAFORM_VERSION }}
 
     - name: terraform format
       run: terraform fmt -recursive -check
