@@ -1,7 +1,6 @@
-https://github.com/yuyasugano/terraform-sagemaker-sample-1
-https://y-ohgi.com/introduction-terraform/
+# AWS Terraform
 
-## Terraform and Terragrunt
+## Terraform / Terragrunt
 
 ### Version
 
