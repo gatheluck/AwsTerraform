@@ -1,7 +1,6 @@
-https://github.com/yuyasugano/terraform-sagemaker-sample-1
-https://y-ohgi.com/introduction-terraform/
+# AWS Terraform
 
-## Terraform and Terragrunt
+## Terraform / Terragrunt
 
 ### Version
 
@@ -46,3 +45,5 @@ $ tgenv use 0.36.1
 $ tgenv list  # check currently used version 
 ```
 
+### Links
+- [.terraform.lock.hcl 完全に理解した / How to update .terraform.lock.hcl efficiently](https://speakerdeck.com/minamijoyo/how-to-update-terraform-dot-lock-dot-hcl-efficiently?slide=4)
