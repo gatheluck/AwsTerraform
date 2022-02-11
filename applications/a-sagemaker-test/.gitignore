@@ -1,0 +1,4 @@
+data
+outputs
+.mypy_cache
+.venv
