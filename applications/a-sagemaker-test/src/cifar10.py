@@ -2,7 +2,7 @@ import argparse
 import logging
 import os
 import pathlib
-from typing import Final
+import sys
 
 import torch
 import torch.distributed as dist
@@ -15,6 +15,15 @@ import torch.utils.data.distributed
 import torchvision
 import torchvision.models
 import torchvision.transforms as transforms
+
+# If you use try, it will raise mypy error,
+# For detail please check following;
+# https://www.gitmemory.com/issue/python/mypy/9856/752267294
+if sys.version_info >= (3, 8):
+    from typing import Final
+else:
+    from typing_extensions import Final
+
 
 logger: Final = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
