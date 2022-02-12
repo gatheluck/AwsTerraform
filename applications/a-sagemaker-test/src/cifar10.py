@@ -3,6 +3,7 @@ import logging
 import os
 import pathlib
 import sys
+import json
 
 import torch
 import torch.distributed as dist
@@ -209,7 +210,7 @@ if __name__ == "__main__":
     sm_model_dir: Final = os.environ.get("SM_MODEL_DIR", "outputs")
     sm_channel_training: Final = os.environ.get("SM_CHANNEL_TRAINING", "data")
 
-    parser.add_argument("--hosts", type=list, default=sm_hosts)  # type: ignore
+    parser.add_argument("--hosts", type=list, default=json.loads(sm_hosts))  # type: ignore
     parser.add_argument("--current-host", type=str, default=sm_current_host)
     parser.add_argument("--model-dir", type=str, default=sm_model_dir)
     parser.add_argument("--data-dir", type=str, default=sm_channel_training)
